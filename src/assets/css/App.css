@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+    --color-green-400: hsl(180, 29%, 50%);
+    --color-green-900: hsl(180, 14%, 20%);
+    --color-green-600: #5da4a4;
+    --color-green-50: hsl(180, 52%, 96%);
+    --color-gray-400: hsl(180, 8%, 52%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+}
+
+
+.bg-green-50 {
+    background-color: var(--green-50);
+}
+
+.bg-green-400 {
+    background-color: var(--green-400);
+}
+
+.bg-green-600 {
+    background-color: var(--green-600);
+}
+
+.bg-green-900 {
+    background-color: var(--green-900);
+}
+
+.text-gray-400 {
+    color: var(--gray-400);
+}
+
+.text-green-900 {
+    color: var(--green-900);
+}
+
+.text-green-600 {
+    color: var(--green-600);
+}
+
+.text-green-400 {
+    color: var(--green-400);
+}
+
+
+.text-green-50 {
+    color: var(--green-50);
+}
+
+.border-green-50 {
+    border-color: var(--green-50);
+}
+
+.border-green-400 {
+    border-color: var(--green-400);
+}
+
+.border-green-600 {
+    border-color: var(--green-600);
+}
+
+.border-green-900 {
+    border-color: var(--green-900);
+}
+
