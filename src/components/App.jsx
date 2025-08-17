@@ -10,7 +10,8 @@ function App() {
 
   return (
     <div class="bg-[var(--color-green-50)]">
-    <div className='bg-[url(@img/bg-header-mobile.svg)] lg:bg-[url(@img/bg-header-desktop.svg)] h-[200px] bg-no-repeat bg-center bg-cover w-full bg-[var(--color-green-600)]'></div>
+      <div className='bg-var(--color-green-600) text-black text-center py-3'>Developed by Oscar Valenzuela</div>
+      <div className='bg-[url(@img/bg-header-mobile.svg)] lg:bg-[url(@img/bg-header-desktop.svg)] h-[200px] bg-no-repeat bg-center bg-cover w-full bg-[var(--color-green-600)]'></div>
       <div className='md:w-full md:px-4 xl:w-[1440px] m-auto'>
         <Filter/>
         <div className="flex flex-col gap-y-5 py-10">
