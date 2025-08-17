@@ -12,12 +12,10 @@ export default function FilterProvider({children}) {
             if(prev.includes(value)) return prev.filter(item => item !== value);
             else return [...prev, value];
         });
-        filterEmployes();
     }
 
     const removeFilter = (value) => {
         setFilter(prev => prev.filter(item => item !== value));
-        filterEmployes();
     }
 
     const clearFilter = () => {
@@ -28,7 +26,9 @@ export default function FilterProvider({children}) {
         if(filter.length > 0) {
             setEmployes(prev => 
                 prev.filter(item => 
-                    item.languages.some(lang => filter.includes(lang))
+                    filter.includes(item.role) ||
+                    item.languages.some(lang => filter.includes(lang)) ||
+                    filter.includes(item.level)
                 )
             );
         } else {
@@ -36,7 +36,7 @@ export default function FilterProvider({children}) {
         }
     }, [filter]);
 
-    console.log(employes);
+    console.log(filter);
 
     return (
         <FilterContext.Provider value={{employes, filter, addFilter, removeFilter, clearFilter}}>

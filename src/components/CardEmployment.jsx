@@ -27,6 +27,8 @@ export default function CardEmployment({id, company, logo, newCompany, featured,
                     </div>
                 </div>
                 <div className="flex flex-row items-start gap-2 flex-wrap">
+                    <button onClick={() => addFilter(role)} key={role} className={`bg-[var(--color-green-50)] hover:bg-[var(--color-green-600)] hover:text-white text-[var(--color-green-400)] duration-300 cursor-pointer py-1 px-3 uppercase rounded-md text-md ${filter.includes(role) ? 'bg-[var(--color-green-600)] text-white' : ''}`}>{role}</button>
+                    <button onClick={() => addFilter(level)} key={level} className={`bg-[var(--color-green-50)] hover:bg-[var(--color-green-600)] hover:text-white text-[var(--color-green-400)] duration-300 cursor-pointer py-1 px-3 uppercase rounded-md text-md ${filter.includes(level) ? 'bg-[var(--color-green-600)] text-white' : ''}`}>{level}</button>
                     {languages.map(lang => <button onClick={() => addFilter(lang)} key={lang} className={`bg-[var(--color-green-50)] hover:bg-[var(--color-green-600)] hover:text-white text-[var(--color-green-400)] duration-300 cursor-pointer py-1 px-3 uppercase rounded-md text-md ${filter.includes(lang) ? 'bg-[var(--color-green-600)] text-white' : ''}`}>{lang}</button>)}
                 </div>
             </div>
